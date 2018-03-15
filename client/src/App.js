@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Signup from './Signup';
 import Login from './Login';
-<<<<<<< HEAD
 import Landing from './Landing';
-=======
 import Navbar from './Navbar';
->>>>>>> abc6eecb9f08b2d8aadcf316bb056f6332db2954
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
 
@@ -63,6 +60,7 @@ class App extends Component {
         <div>
           <UserProfile user={theUser} logout={this.logout} />
           <Navbar />
+          <Landing />
         </div>
       )
     } else {
@@ -73,6 +71,7 @@ class App extends Component {
             <Login liftToken={this.liftTokenToState} />
           </div>
           <Navbar />
+          <Landing />
         </div>
       )
     }
