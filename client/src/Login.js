@@ -34,11 +34,21 @@ class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
-        Password: <input type='password' value={this.state.password} onChange={this.handlePasswordChange} /><br />
-        <input type='submit' value='Log In!' />
-      </form>
+      <div id='loginBox'>
+        <form onSubmit={this.handleSubmit}>
+            <div class="form-group"> 
+              <label for='emailLogin'>Email</label> 
+              <br/>
+              <input type='text' id='emailLogin' value={this.state.email} onChange={this.handleEmailChange} /><br />
+            </div>  
+            <div class="form-group"> 
+              <label for='passwordLogin'>Password</label> 
+              <br/>
+              <input type='password' id='passwordLogin' value={this.state.password} onChange={this.handlePasswordChange} /><br />
+            </div> 
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
     )
   }
 }

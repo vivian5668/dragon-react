@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Signup from './Signup';
 import Login from './Login';
+import Landing from './Landing';
+import Navbar from './Navbar';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
 
@@ -57,13 +59,19 @@ class App extends Component {
       return (
         <div>
           <UserProfile user={theUser} logout={this.logout} />
+          <Navbar />
+          <Landing />
         </div>
       )
     } else {
       return (
         <div className="App">
-          <Signup liftToken={this.liftTokenToState} />
-          <Login liftToken={this.liftTokenToState} />
+          <div id="loginSignup">
+            <Signup liftToken={this.liftTokenToState} />
+            <Login liftToken={this.liftTokenToState} />
+          </div>
+          <Navbar />
+          <Landing />
         </div>
       )
     }
