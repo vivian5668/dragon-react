@@ -41,25 +41,43 @@ class Signup extends Component {
 
   render() {
     return (
-      <div id='SignupBox'>
-        <form onSubmit={this.handleSubmit}>
-          <div class="form-group"> 
-              <label for='nameSignup'>Name</label>
-              <br/>
-              <input type='text' id="nameSignup" value={this.state.name} onChange={this.handleNameChange} /><br />
-           </div> 
-           <div class="form-group">  
-              <label for='emailSignup'>Email</label>
-              <br/>
-              <input type='text' id='emailSignup' value={this.state.email} onChange={this.handleEmailChange} /><br />
-           </div>  
-           <div class="form-group"> 
-              <label for='passwordSignup'>Password</label>
-              <br/>
-              <input type='password' id='passwordSignup' value={this.state.password} onChange={this.handlePasswordChange} /><br />
-           </div> 
-           <button type="submit" class="btn btn-primary">Signup</button>
-        </form>
+      <div>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signupModal">Open Modal</button>
+
+        <div id="signupModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                  <div id='SignupBox'>
+                    <form onSubmit={this.handleSubmit}>
+                      <div class="form-group"> 
+                          <label for='nameSignup'>Name</label>
+                          <br/>
+                          <input type='text' id="nameSignup" value={this.state.name} onChange={this.handleNameChange} /><br />
+                       </div> 
+                       <div class="form-group">  
+                          <label for='emailSignup'>Email</label>
+                          <br/>
+                          <input type='text' id='emailSignup' value={this.state.email} onChange={this.handleEmailChange} /><br />
+                       </div>  
+                       <div class="form-group"> 
+                          <label for='passwordSignup'>Password</label>
+                          <br/>
+                          <input type='password' id='passwordSignup' value={this.state.password} onChange={this.handlePasswordChange} /><br />
+                       </div> 
+                       <button type="submit" class="btn btn-primary">Signup</button>
+                    </form>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     )
   }
