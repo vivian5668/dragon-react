@@ -1,6 +1,6 @@
 import React from 'react';
 
- const Landing = () => {
+ const Landing = (props) => {
     return (
       <header className="masthead">
         <div className="container">
@@ -9,7 +9,7 @@ import React from 'react';
             <div className="intro-lead-in">The online resoure for purchasing and styling your fire-breathing pets</div>
             <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Sign Up</a>
             <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">See What We Do</a>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Log In</a>
+            {props.loginButton}
           </div>
         </div>
       </header>

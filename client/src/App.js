@@ -64,6 +64,8 @@ class App extends Component {
         </div>
       )
     } else {
+      let loginButton = <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#loginModal" href="#services">Log In</a>
+
       return (
         <div className="App">
           <div id="loginSignup">
@@ -71,7 +73,7 @@ class App extends Component {
             <Login liftToken={this.liftTokenToState} />
           </div>
           <Navbar />
-          <Landing />
+          <Landing loginButton={loginButton}/>
         </div>
       )
     }
