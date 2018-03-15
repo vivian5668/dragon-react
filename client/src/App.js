@@ -4,6 +4,7 @@ import Signup from './Signup';
 import Login from './Login';
 import Landing from './Landing';
 import Navbar from './Navbar';
+import Products from './Products';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
 
@@ -61,6 +62,7 @@ class App extends Component {
           <UserProfile user={theUser} logout={this.logout} />
           <Navbar />
           <Landing />
+          <Products />
         </div>
       )
     } else {
@@ -72,6 +74,7 @@ class App extends Component {
           </div>
           <Navbar />
           <Landing />
+          <Products />
         </div>
       )
     }
