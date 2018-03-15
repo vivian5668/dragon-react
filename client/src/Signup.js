@@ -43,10 +43,22 @@ class Signup extends Component {
     return (
       <div id='SignupBox'>
         <form onSubmit={this.handleSubmit}>
-          Name: <input type='text' value={this.state.name} onChange={this.handleNameChange} /><br />
-          Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
-          Password: <input type='password' value={this.state.password} onChange={this.handlePasswordChange} /><br />
-          <input type='submit' value='Sign Up!' />
+          <div class="form-group"> 
+              <label for='nameSignup'>Name</label>
+              <br/>
+              <input type='text' id="nameSignup" value={this.state.name} onChange={this.handleNameChange} /><br />
+           </div> 
+           <div class="form-group">  
+              <label for='emailSignup'>Email</label>
+              <br/>
+              <input type='text' id='emailSignup' value={this.state.email} onChange={this.handleEmailChange} /><br />
+           </div>  
+           <div class="form-group"> 
+              <label for='passwordSignup'>Password</label>
+              <br/>
+              <input type='password' id='passwordSignup' value={this.state.password} onChange={this.handlePasswordChange} /><br />
+           </div> 
+           <button type="submit" class="btn btn-primary">Signup</button>
         </form>
       </div>
     )

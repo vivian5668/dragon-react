@@ -58,12 +58,13 @@ class App extends Component {
       return (
         <div>
           <UserProfile user={theUser} logout={this.logout} />
+          <Navbar />
         </div>
       )
     } else {
       return (
         <div className="App">
-          <div>
+          <div id="loginSignup">
             <Signup liftToken={this.liftTokenToState} />
             <Login liftToken={this.liftTokenToState} />
           </div>

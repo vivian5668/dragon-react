@@ -7,8 +7,16 @@ body {
 
 #loginBox {
 	display: inline-block;
+	text-align: left;
+	border-left: 6px solid Black;
 }
 
 #SignupBox {
 	display: inline-block;
+	text-align: left;
+
+}
+
+#loginSignup {
+	background-color: #b3b3b3;
 }
