@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Signup from './Signup';
 import Login from './Login';
+import Navbar from './Navbar';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
 
@@ -64,6 +65,7 @@ class App extends Component {
         <div className="App">
           <Signup liftToken={this.liftTokenToState} />
           <Login liftToken={this.liftTokenToState} />
+          <Navbar />
         </div>
       )
     }
