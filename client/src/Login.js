@@ -40,8 +40,9 @@ class Login extends Component {
 
                 <div class="modal-content">
                   <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    
                   </div>
                   <div class="modal-body">
                       <div id='loginBox'>
@@ -61,7 +62,6 @@ class Login extends Component {
                         </div>
                   </div>
                 </div>
-
               </div>
             </div>
         </div>
