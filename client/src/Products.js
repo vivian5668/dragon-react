@@ -7,7 +7,7 @@ import React from 'react';
           <div class="row">
             <div class="col-lg-12 text-center">
               <h2 class="section-heading text-uppercase">Products & Services</h2>
-              <h3 class="section-subheading text-muted">Check out our current dragons, services and accessories below:</h3>
+              <h3 class="section-subheading text-muted">Check out our available dragons, services and accessories below:</h3>
             </div>
           </div>
           <div class="row text-center">
@@ -33,7 +33,7 @@ import React from 'react';
                 <i class="fas fa-fire-extinguisher fa-stack-1x fa-inverse"></i>
               </span>
               <h4 class="service-heading">Accessories</h4>
-              <p class="text-muted">Raising a dragon can be a full-time job. We have everything you need to prepare for your latest addition to the family. Scale brushes, racing saddles, fire extinguishers, we've got it all!</p>
+              <p class="text-muted">Raising a dragon can be a full-time job. We have everything you need to prepare for your latest addition to the family. Scale brushes, racing saddles, fire extinguishers, we've got them all at prices that won't break the bank! </p>
             </div>
           </div>
         </div>
