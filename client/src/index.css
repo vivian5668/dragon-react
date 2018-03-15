@@ -1,5 +1,14 @@
 body {
   margin: 0;
   padding: 0;
+  padding-top: 65px; 
   font-family: sans-serif;
+}
+
+#loginBox {
+	display: inline-block;
+}
+
+#SignupBox {
+	display: inline-block;
 }

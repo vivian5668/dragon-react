@@ -63,8 +63,10 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <Signup liftToken={this.liftTokenToState} />
-          <Login liftToken={this.liftTokenToState} />
+          <div>
+            <Signup liftToken={this.liftTokenToState} />
+            <Login liftToken={this.liftTokenToState} />
+          </div>
           <Navbar />
         </div>
       )
