@@ -72,7 +72,7 @@ class Navbar extends Component {
 		              <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
 		            </li>
 				    <li className="nav-item">
-			          <a className="nav-link js-scroll-trigger" data-toggle="modal" data-target="#loginModal">Login</a>
+			          <a className="nav-link js-scroll-trigger" data-toggle="modal" data-target="#loginModal" data-backdrop="false">Login</a>
 			        </li>
 		          </ul>
 		        </div>
