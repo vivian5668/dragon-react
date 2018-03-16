@@ -1,10 +1,24 @@
 
 $(document).ready(function(){
-	$('#loginBox').on('submit', function(e) {
-		$('#loginModal').modal('hide');
-	});
+		$('#loginBox').on('submit', function(e) {
+			// $('#loginSubmitButton').attr('data-dismiss', 'modal')
+			$('#loginModal').modal('toggle');
+			// setTimeout(function() {
+				
+				// $('#page-top').removeClass('modal-open')
 
-	$('#signupBox').on('submit', function(e) {
-		$('#signupModal').modal('hide');
-	})
+				$('body').removeClass('modal-open');
+				$('.modal-backdrop').remove();
+			// }, 500)
+		});
+
+		$('#signupBox').on('submit', function(e) {
+			// $('#signupSubmitButton').attr('data-dismiss', 'modal')
+			$('#signupModal').modal('toggle');
+			// setTimeout(function() {
+				
+				$('#page-top').removeClass('modal-open')
+				$('.modal-backdrop').remove();
+			// }, 500)
+		})
 })
