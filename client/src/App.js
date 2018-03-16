@@ -5,6 +5,7 @@ import Login from './Login';
 import Landing from './Landing';
 
 import Navbar from './Navbar';
+import Products from './Products';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
 
@@ -63,6 +64,7 @@ class App extends Component {
           <UserProfile user={theUser} logout={this.logout} />
           <Navbar user={theUser} logout={this.logout}/>
           <Landing user={theUser} logout={this.logout}/>
+
         </div>
       )
     } else {
@@ -76,7 +78,12 @@ class App extends Component {
             <Login liftToken={this.liftTokenToState} />
           </div>
           <Navbar />
+
           <Landing loginButton={loginButton} signupButton={signupButton}/>
+
+          <Landing />
+          <Products />
+
         </div>
       )
     }
