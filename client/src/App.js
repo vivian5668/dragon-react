@@ -56,12 +56,13 @@ class App extends Component {
 
   render() {
     let theUser = this.state.user
+    console.log('this is in app.js:', theUser)
     if (typeof theUser === 'object' && Object.keys(theUser).length > 0) {
       return (
         <div>
           <UserProfile user={theUser} logout={this.logout} />
-          <Navbar />
-          <Landing />
+          <Navbar user={theUser} logout={this.logout}/>
+          <Landing user={theUser} logout={this.logout}/>
         </div>
       )
     } else {

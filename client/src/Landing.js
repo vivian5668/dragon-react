@@ -10,6 +10,7 @@ import React from 'react';
             {props.signupButton}
             <button className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id='landingButton1' href="#services">See What We Do</button>
             {props.loginButton}
+            <button className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" onClick={props.logout}>Log Out! </button>
           </div>
         </div>
       </header>
