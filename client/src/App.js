@@ -62,12 +62,14 @@ class App extends Component {
         <div>
           <UserProfile user={theUser} logout={this.logout} />
           <Navbar user={theUser} logout={this.logout}/>
-          <Landing />
+          <Landing user={theUser} logout={this.logout}/>
         </div>
       )
     } else {
-      let loginButton = <button className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#loginModal" data-backdrop="false">Log In</button>
-      let signupButton = <button className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#signupModal" data-backdrop="false">Sign Up</button>
+      let loginButton = <button className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" 
+          data-toggle="modal" data-target="#loginModal" data-backdrop="false">Log In</button>
+      let signupButton = <button className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" 
+          data-toggle="modal" data-target="#signupModal" data-backdrop="false">Sign Up</button>
       
       return (
         <div className="App">

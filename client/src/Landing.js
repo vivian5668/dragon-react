@@ -5,7 +5,7 @@ class Landing extends Component {
     super(props)
   }
   render() {
-  if (this.props.user) {
+  if (typeof this.props.user === 'object' && Object.keys(this.props.user).length > 0) {
        return (
           <header className="masthead">
             <div className="container">
@@ -19,7 +19,7 @@ class Landing extends Component {
           </header>
         )
    
-  } else {
+  } else  {
        return (
           <header className="masthead">
             <div className="container">
