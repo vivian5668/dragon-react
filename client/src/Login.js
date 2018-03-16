@@ -35,15 +35,14 @@ class Login extends Component {
   render() {
     return (  
         <div>
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#loginModal">Open Modal</button>
-
             <div id="loginModal" class="modal fade" role="dialog">
               <div class="modal-dialog">
 
                 <div class="modal-content">
                   <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    
                   </div>
                   <div class="modal-body">
                       <div id='loginBox'>
@@ -62,8 +61,10 @@ class Login extends Component {
                           </form>
                         </div>
                   </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
                 </div>
-
               </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import './App.css';
 import Signup from './Signup';
 import Login from './Login';
 import Landing from './Landing';
+
 import Navbar from './Navbar';
 import Products from './Products';
 import { UserProfile } from './UserProfile';
@@ -56,16 +57,20 @@ class App extends Component {
 
   render() {
     let theUser = this.state.user
+    console.log('this is in app.js:', theUser)
     if (typeof theUser === 'object' && Object.keys(theUser).length > 0) {
       return (
         <div>
           <UserProfile user={theUser} logout={this.logout} />
-          <Navbar />
-          <Landing />
-          <Products />
+          <Navbar user={theUser} logout={this.logout}/>
+          <Landing user={theUser} logout={this.logout}/>
+
         </div>
       )
     } else {
+      let loginButton = <button id='landingButton2' className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#loginModal">Log In</button>
+      let signupButton = <button id='landingButton3' className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#signupModal">Sign Up</button>
+      
       return (
         <div className="App">
           <div id="loginSignup">
@@ -73,8 +78,12 @@ class App extends Component {
             <Login liftToken={this.liftTokenToState} />
           </div>
           <Navbar />
+
+          <Landing loginButton={loginButton} signupButton={signupButton}/>
+
           <Landing />
           <Products />
+
         </div>
       )
     }
