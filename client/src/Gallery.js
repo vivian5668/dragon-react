@@ -2,8 +2,8 @@ import React from 'react';
 
  const Gallery = props => {
 
-   let allDragons = props.map(function(dragon, index) {
-     return <key={index} text={dragon} id={index}/>
+   const dragonNames = props.dragons.map(function(dragon, index) {
+     return <span key={index}>{dragon} </span>
    })
 
     return (
@@ -23,11 +23,11 @@ import React from 'react';
                     <i class="fa fa-plus fa-3x"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src={props.image} alt="" />
+                <img class="img-fluid" src={dragonNames} alt="" />
               </a>
               <div class="portfolio-caption">
-                <h4>{props.name}</h4>
-                <p class="text-muted">{props.description}</p>
+                <h4>{dragonNames}</h4>
+                <p class="text-muted">{dragonNames}</p>
               </div>
             </div>
           </div>
