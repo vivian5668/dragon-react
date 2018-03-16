@@ -52,7 +52,7 @@ class Signup extends Component {
                 
               </div>
               <div class="modal-body">
-                  <div id='SignupBox'>
+                  <div id='signupBox'>
                     <form onSubmit={this.handleSubmit}>
                       <div class="form-group"> 
                           <label for='nameSignup'>Name</label>
