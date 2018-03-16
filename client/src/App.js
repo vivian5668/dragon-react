@@ -6,6 +6,8 @@ import Landing from './Landing';
 import Navbar from './Navbar';
 import Gallery from './Gallery';
 import Products from './Products';
+import About from './About';
+import Team from './Team';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
 
@@ -66,12 +68,12 @@ class App extends Component {
       {
         name: 'Rhaegal',
         image: '../public/img/dragons/dragon2.png',
-        description: ''
+        description: 'Rhaegal was one of three dragon pups, he was rescued when his mother emigrated to a land across the sea. He needs a firm hand but will be loyal when you gain his trust.'
       },
       {
         name: 'Viserion',
         image: '../public/img/dragons/dragon3.png',
-        description: ''
+        description: 'Viserion was rescued as an egg and later hatched after being incubated in flames with a queen. After a tough life, he found his way to a shelter...he has been living in a cold climate as of late, so he needs just the right cave man or woman to bring him back to life!'
       },
       {
         name: 'Puff',
@@ -81,27 +83,29 @@ class App extends Component {
       {
         name: 'Smaug',
         image: '../public/img/dragons/dragon5.png',
-        description: ''
+        description: "Smaug loves shiny objects. Gold, jewels, you name it. Learn some witchcraft called alchemy and he'll be your friend for life."
       },
       {
         name: 'Drogon',
         image: '../public/img/dragons/dragon6.png',
-        description: ''
+        description: "Drogon is another one of our rescued dragons. He has had ups and downs but at one point lived with royalty. Anyone would be lucky to have him as a companion - just keep your hands to yourself and don't make eye contact."
       }
     ]
 
     let theUser = this.state.user
+    console.log('this is in app.js:', theUser)
     if (typeof theUser === 'object' && Object.keys(theUser).length > 0) {
       return (
         <div>
           <UserProfile user={theUser} logout={this.logout} />
-          <Navbar />
-          <Landing />
-          <Products />
-          <Gallery dragons={dragons} />
+          <Navbar user={theUser} logout={this.logout}/>
+          <Landing user={theUser} logout={this.logout}/>
         </div>
       )
     } else {
+      let loginButton = <button id='landingButton2' className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#loginModal">Log In</button>
+      let signupButton = <button id='landingButton3' className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" data-target="#signupModal">Sign Up</button>
+
       return (
         <div className="App">
           <div id="loginSignup">
@@ -109,9 +113,8 @@ class App extends Component {
             <Login liftToken={this.liftTokenToState} />
           </div>
           <Navbar />
-          <Landing />
+          <Landing loginButton={loginButton} signupButton={signupButton}/>
           <Products />
-          <Gallery dragons={dragons} />
         </div>
       )
     }

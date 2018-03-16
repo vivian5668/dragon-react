@@ -2,32 +2,32 @@ import React from 'react';
 
  const Gallery = props => {
 
-   const dragonNames = props.dragons.map(function(dragon, index) {
-     return <span key={index}>{dragon} </span>
+   const allDragons = props.map(function(dragon, index) {
+     return <span key={index}>{dragon}</span>
    })
 
     return (
-      <section class="bg-light" id="portfolio">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">Meet Our Dragons</h2>
-              <h3 class="section-subheading text-muted">Here are the dragons we have available. Please signup or login to bring one home to your cave today!</h3>
+      <section className="bg-light" id="portfolio">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <h2 className="section-heading text-uppercase">Meet Our Dragons</h2>
+              <h3 className="section-subheading text-muted">Here are the dragons we have available. Please signup or login to bring one home to your cave today!</h3>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
+          <div className="row">
+            <div className="col-md-4 col-sm-6 portfolio-item">
+              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <div className="portfolio-hover">
+                  <div className="portfolio-hover-content">
+                    <i className="fa fa-plus fa-3x"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src={dragonNames} alt="" />
+                <img className="img-fluid" src={allDragons} alt="" />
               </a>
-              <div class="portfolio-caption">
-                <h4>{dragonNames}</h4>
-                <p class="text-muted">{dragonNames}</p>
+              <div className="portfolio-caption">
+                <h4>{allDragons}</h4>
+                <p className="text-muted">{allDragons}</p>
               </div>
             </div>
           </div>
