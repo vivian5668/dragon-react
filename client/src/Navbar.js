@@ -10,7 +10,7 @@ class Navbar extends Component {
 		return (
 		 	<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
 		      <div className="container">
-		        <a className="navbar-brand js-scroll-trigger" href="#page-top">Dragon Shop</a>
+		        <a className="navbar-brand js-scroll-trigger" href="#page-top">Dragons 'R Us</a>
 		        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 		          Menu
 		          <i className="fa fa-bars"></i>
@@ -29,9 +29,7 @@ class Navbar extends Component {
 		            <li className="nav-item">
 		              <a className="nav-link js-scroll-trigger" href="#team">Dragon Trainers</a>
 		            </li>
-		            <li className="nav-item">
-		              <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
-		            </li>
+		 
 		       
 		            <li className="nav-item">
 			          <a className="nav-link js-scroll-trigger">Hello, {this.props.user.name}!</a>
@@ -49,7 +47,7 @@ class Navbar extends Component {
 		return (
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
 		      <div className="container">
-		        <a className="navbar-brand js-scroll-trigger" href="#page-top">Dragon Shop</a>
+		        <a className="navbar-brand js-scroll-trigger" href="#page-top">Dragons 'R Us</a>
 		        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 		          Menu
 		          <i className="fa fa-bars"></i>
@@ -68,9 +66,7 @@ class Navbar extends Component {
 		            <li className="nav-item">
 		              <a className="nav-link js-scroll-trigger" href="#team">Dragon Trainers</a>
 		            </li>
-		            <li className="nav-item">
-		              <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
-		            </li>
+		           
 				    <li className="nav-item">
 			          <a className="nav-link js-scroll-trigger" data-toggle="modal" data-target="#loginModal" data-backdrop="false">Login</a>
 			        </li>
